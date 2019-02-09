@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Find Me</title>
+        <meta charset="utf-8"/>
+
+        <style>
+            #body {
+                position: relative;
+                text-align: left;
+                width: 800px;
+                margin: 100px auto;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div id="body">
+            <h1>Your IP Address: {{ip}}</h1>
+            <h2>Your location: {{city}}, {{state}}, {{country}}</h2>
+            <h3>Your Timezone: {{timezone}} (<span id="time"></span>)</h3>
+
+            <iframe width="500" height="400" frameborder="0" src="https://www.bing.com/maps/embed?h=400&w=500&cp={{latitude}}~{{longitude}}&lvl=11&typ=d&sty=r&src=SHELL&FORM=MBEDV8" scrolling="no">
+            </iframe>
+        </div>
+
+
+        <script type="text/javascript>
+            setInterval(() => {
+                var time = document.getElementById('time');
+                new Date().toLocaleString("en-US", {timeZone: "{{timezone}}"});
+
+            }, 100);
+        </script>
+    </body>
+</html>
