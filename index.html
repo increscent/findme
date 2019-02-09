@@ -25,12 +25,10 @@
             </iframe>
         </div>
 
-
-        <script type="text/javascript>
+        <script type="text/javascript">
             setInterval(() => {
-                var time = document.getElementById('time');
-                new Date().toLocaleString("en-US", {timeZone: "{{timezone}}"});
-
+                var timeSpan = document.getElementById('time');
+                timeSpan.innerHTML = new Date().toLocaleString("en-US", {timeZone: "{{timezone}}"});
             }, 100);
         </script>
     </body>
