@@ -13,12 +13,11 @@ const server = http.createServer((req, res) => {
     if (req.method != 'GET')
         return methodNotAllowed(res);
 
-    // only allow the root path
+    var ip = req.socket.remoteAddress;
+    // allow user to specify a custom ip address (e.g. `/1.1.1.1`)
     if (req.url != '/')
-        return notFound(res);
+        ip = req.url.substr(1);
 
-//    var ip = req.socket.remoteAddress;
-    var ip = '1.1.1.1';
     ipLookup(ip, (err, data) => {
         if (err)
             return serverError(res, err);
