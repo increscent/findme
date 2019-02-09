@@ -6,8 +6,8 @@ Author: Robert Williams
 
 Buld/Run:
 --------------------------------------------------------------------------------
-docker build -t robert/findme .
-docker run -p 80:5678 -d robert/findme
+docker build -t findme .
+docker run -p 80:5678 -d findme
 
 Config:
 --------------------------------------------------------------------------------

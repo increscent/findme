@@ -2,7 +2,7 @@ from node:8
 
 WORKDIR /home/robert/findme
 
-COPY pakage*.json ./
+COPY package*.json ./
 
 RUN npm install
 
