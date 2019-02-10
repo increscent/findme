@@ -18,3 +18,7 @@ Usage:
 Connect from the browser (http://localhost:80/).
 (Replace `localhost` with the hostname of the server where the image is running.)
 By default the server uses the client's IP address. You may pass a custom IP address in the path (http://localhost/1.1.1.1).
+
+Example:
+--------------------------------------------------------------------------------
+Deployed at findme.increscent.org (72.2.118.195)
