@@ -7,11 +7,11 @@ Author: Robert Williams
 Buld/Run:
 --------------------------------------------------------------------------------
 docker build -t findme .
-docker run -p 80:5678 -d findme
+docker run -p 80:80 -d findme
 
 Config:
 --------------------------------------------------------------------------------
-The port can be changed in config.js (default: 5678).
+The port can be changed in config.js (default: 80).
 
 Usage:
 --------------------------------------------------------------------------------
